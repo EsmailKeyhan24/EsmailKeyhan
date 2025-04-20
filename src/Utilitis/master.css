@@ -102,19 +102,17 @@ body {
                         text-transform: capitalize;
                         padding-inline: 15px;
                         transition: .3s;
-
-                        &.active,
                         &:hover {
                             color: #fff;
                             background-color: #1b1d2e;
                             border-bottom: 3px solid #1488fa;
                         }
                     }
-                }
-                >ul>li:nth-of-type(1)>a {
-                    background-color: #1b1d2e;
-                    color: var(--white-color);
-                    border-bottom: 3px solid #1488fa;
+                    >li.show{
+                        color: #fff;
+                        background-color: #1b1d2e;
+                        border-bottom: 3px solid #1488fa;
+                    }
                 }
             }
 

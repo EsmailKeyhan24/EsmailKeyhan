@@ -4,12 +4,21 @@ const main_body_sections=document.querySelectorAll('.main-body>section');
 main_menu_lis.forEach((li, index)=>{
     li.addEventListener('click' , (e)=>{
         e.preventDefault();
+        for(j=0; j<main_menu_lis.length; j++){
+            main_menu_lis[j].classList.remove('show')
+        }
+        li.classList.add('show')
+
         for(i=0; i<main_body_sections.length; i++){
             main_body_sections[i].classList.remove('active')
         }
         main_body_sections[index].classList.add('active')
     })
 })
+
+
+
+
 
 
 
