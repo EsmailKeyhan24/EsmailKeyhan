@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "watch": "postcss App.css --dir public/assets/stylesheet --watch"
+    "watch": "postcss App.css --dir assets/stylesheet --watch"
   },
   "keywords": [],
   "author": "",
