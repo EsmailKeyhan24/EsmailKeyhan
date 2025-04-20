@@ -1,0 +1,21 @@
+{
+  "name": "menu-3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch": "postcss App.css --dir public/assets/stylesheet --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "postcss": "^8.5.3",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.0"
+  },
+  "dependencies": {
+    "cssnano": "^7.0.6"
+  }
+}
+

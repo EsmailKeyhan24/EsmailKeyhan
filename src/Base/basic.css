@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+:root {
+    --bg-color: #151728;
+    --border-color: #272a3a;
+    --title-font: "DM Sans", sans-serif;
+    --body-font: "Source Sans Pro", sans-serif;
+    --side-title: #5c5e6e;
+    --button: #8f98a9;
+    --white-color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+header,
+section,
+footer,
+article,
+aside,
+main,
+nav,
+figure,
+figcaption,
+ul,
+div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    object-fit: cover;
+}
+
+.btns {
+    background-color: #1b86f9;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    padding: 5px 20px;
+    margin-left: auto;
+    box-shadow: 0 0 20px #1b86f9;
+    cursor: pointer;
+}

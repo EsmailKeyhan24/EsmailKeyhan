@@ -1,0 +1,4 @@
+@import './src/Base/basic.css';
+@import './src/Utilitis/bootstrap.min.css';
+@import './src/Utilitis/master.css';
+@import './src/Components/localScope.css';

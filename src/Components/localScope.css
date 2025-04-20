@@ -1,0 +1,419 @@
+/* _______SmallPhone____DEVICSE____ */
+@media screen and (max-width:576px) {
+    /* Small Phone  */
+
+    .side-left{
+        width:60px;
+        #toggle{
+            height: 50px;
+            background-color:var(--border-color);
+            margin-bottom:20px;
+            cursor: pointer;
+        }
+        >h2{
+            writing-mode: vertical-rl;
+            color:var(--white-color);
+            font-size:18px;
+            transform: scaleY(-1) scaleX(-1);
+        }
+    }
+    .main-container{
+        width:calc(100% - 60px);
+    }
+    .main-menu>ul{
+        width: 100%;
+        transform: translate(-50%) !important;
+        >li>a{
+            font-size:13px;
+        }
+    }
+
+    /* ___________home-banner_____ */
+    .home-banner{
+        >section{
+            width: 100%;
+            margin-top:17px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* _______LargePhone____DEVICSE____ */
+@media screen and (min-width:576px) {
+    /* LG Phone  */
+    .side-left{
+        width:60px;
+        #toggle{
+            height: 50px;
+            background-color:var(--border-color);
+            margin-bottom:20px;
+            cursor: pointer;
+        }
+        >h2{
+            writing-mode: vertical-rl;
+            color:var(--white-color);
+            font-size:18px;
+            transform: scaleY(-1) scaleX(-1);
+        }
+    }
+    .main-container{
+        width:calc(100% - 60px);
+    }
+    
+
+    /* ___________home-banner_____ */
+    .home-banner{
+        >section{
+            width: 100%;
+            margin-top:17px;
+        }
+    }
+
+    .main-menu{
+        >ul{
+            transform: translate(-50%) !important;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+/* _______TabLat___1__DEVICSE____ */
+@media screen and (max-width:768px) {
+    #profile {
+        position: absolute;
+        top:30%;left: 50%;
+        transform: translate(-50% , -50%);
+
+        >img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border:3px solid var(--bg-color);
+        }
+
+        >strong {
+            color: var(--white-color);
+            font-weight: 500;
+            font-size: 22px;
+            position: absolute;
+            bottom: -35px;
+            white-space: nowrap;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    /* ____#photos_____ */
+    #photos{
+        display: grid;
+        grid-template-columns: repeat(3  , 1fr);
+        grid-template-rows: repeat(4 , 175px);
+        gap:10px;
+        >figure{
+            &:nth-of-type(1){
+                grid-area:1 / 1 / span 2 / span 2;
+            }
+            &:nth-of-type(4){
+                grid-column:1/ span 2;
+            }
+            
+        }
+    }
+}
+
+
+
+/* _______TabLat___2__DEVICSE____ */
+@media screen and (min-width:768px) {
+    /* MD Tablet  */
+    #profile {
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+
+        >img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border:3px solid var(--bg-color);
+        }
+
+        >strong {
+            color: var(--white-color);
+            font-weight: 500;
+            font-size: 22px;
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+    }
+
+
+     /* ___________home-banner_____ */
+     .home-banner{
+        height: 133vh;
+        display: grid;
+        grid-template-columns: repeat(7 , 1fr);
+        grid-template-rows: repeat(59 , 22px);
+        column-gap:15px;
+        >section{
+            margin-top:0;
+            &:nth-of-type(1){
+                grid-area:1 / 1 / span 8 /span 3;
+            }
+            &:nth-of-type(2){
+                grid-area:1 / 4 / span 9 / span 4;
+            }
+            &:nth-of-type(3){
+                grid-area:10 / 1 / span 13 / span 3;
+            }
+            &:nth-of-type(4){
+                grid-area:11 / 4 / span 16 / span 4;
+            }
+            &:nth-of-type(5){
+                grid-area:24 / 1 / span 10 / span 3;
+            }
+        }
+    }
+    /* ___END___OF___.home-banner__ */
+
+    .main-menu{
+        >ul{
+            transform: translate(-30%) !important;
+        }
+    }
+
+    /* ____#photos_____ */
+    #photos{
+        display: grid;
+        grid-template-columns: repeat(5  , 1fr);
+        grid-template-rows: repeat(3 , 175px);
+        gap:10px;
+        >figure{
+            &:nth-of-type(2){
+                grid-area:1 / 2 / span 2 / span 2;
+            }
+            &:nth-of-type(6){
+                grid-column:4 / span 2;
+            }
+            &:nth-of-type(7){
+                grid-column: 1 / span 2;
+            }
+            &:nth-of-type(8){
+                grid-column:3 / span 3;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+/* _______LapTop___DEVICSE____ */
+@media screen and (min-width:992px) {
+    /* LG Laptop  */
+    .side-left{
+        width:270px;
+        padding:20px;
+        >h2{
+            font-size:16px;
+            text-align: center;
+            width: 100%;
+            color:var(--white-color);
+            text-transform: uppercase;
+            margin-top:8px;
+            writing-mode: horizontal-tb;
+            transform: scaleY(1) scaleX(1);
+        }
+        /* _____menu-side-left_____YOUR_FAVOURITE__ */
+        >.YOUR_FAVOURITE,
+        >.menu-side-left{
+            margin-top: 45px;
+            >h6{
+                color:var(--side-title);
+                text-transform: uppercase;
+                font-size:14px;
+                font-weight:750;
+            }
+            >ul{
+                >li{
+                    margin-bottom:20px;
+                    >a{
+                        display: flex;
+                        width: 100%;
+                        color:var(--button);
+                        text-transform: capitalize;
+                        font-size: 15px;
+                        transition:.2s;
+                        >svg,
+                        >i{
+                            margin-right: 13px;
+                            width: 16px;
+                        }
+                        &:hover{
+                            color:var(--white-color);
+                        }
+                    }
+                }
+            }
+        }
+        >.YOUR_FAVOURITE{
+            margin-top:28px;
+        }
+        /* _______.menu-side-left____.YOUR_FAVOURITE_____ */
+    }
+    /* _____________END__OF___side_left___ */
+
+    .main-container{
+        width:calc(100% - 270px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* _______DESKTOP___DEVICSE____ */
+@media screen and (min-width:1200px) {
+    /* XL Desktop*/
+    .side-left{
+        width:250px;
+    }
+    .side-right{
+        width:280px;
+    }
+    .main-container{
+        width:calc(100% -530px);
+    }
+
+    .notification{
+        >*{
+            color:var(--side-title);
+        }
+        >span{
+            font-size:19px;
+            margin-top:9px;
+            &:nth-of-type(2){
+                margin-left:10px;
+            }
+        }
+        >figure{
+            margin-left: auto;
+        }
+        strong{
+            font-size:10px;
+            margin-right:7px;
+            margin-top:7px;
+        }
+        img{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+    }
+    /* ____STORIES_____ */
+    #STORIES,
+    #CONTACTS{
+        border-bottom:.5px solid var(--border-color);
+        >span{
+            color:var(--side-title);
+            font-weight: 600;
+        }
+        ul>li{
+            display: flex;
+            cursor: pointer;
+
+            >div{
+                &:nth-of-type(1){
+                    >img{
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 50%;
+                        aspect-ratio: 4/3;
+                        object-fit: cover;
+                        object-position:100% contain;
+                    }
+                }
+                &:nth-of-type(2){
+                    margin-left:12px;
+                    >p{
+                        color:#ffffffea;
+                        margin-bottom: 1px;
+                    }
+                    >span{
+                        color:var(--side-title);
+                        font-size:13px;
+                        font-weight:540;
+                    }
+                }
+            }
+        }
+    }
+    /* ____END__OF___STORIES__&&___CONTACTS___ */
+    #STORIES{
+        border-bottom:.5px solid var(--border-color);
+        img{
+            border:3px solid rgb(156, 250, 130);
+        }
+    }
+    /* _______________END__OF______#STORIES___________ */
+    #CONTACTS{
+        >section{
+            height: 270px;
+            overflow: hidden;
+            position: relative;
+            ul>li{
+                position: relative;
+                &::after{
+                    content:'';
+                    display: block;
+                    width: 6px;
+                    height: 6px;
+                    background-color:yellow;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 0;
+                    top:0%;
+                }
+            }
+            #show-more{
+                height: 35px;
+                color:white;
+                position: absolute;
+                bottom: 0px;
+                left: 50%;transform: translateX(-50%);
+                cursor: pointer;
+            }
+        }
+    }
+    /* END___OF__#CONTACTS____  */
+}
+
+
+@media screen and (min-width:1400px) {
+    /* XXL  */
+}
