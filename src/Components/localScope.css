@@ -382,12 +382,15 @@
     }
     /* _______________END__OF______#STORIES___________ */
     #CONTACTS{
+        position: relative;
         >section{
             height: 270px;
             overflow: hidden;
-            position: relative;
+            transition:.3s;
             ul>li{
+                width: 100%;
                 position: relative;
+                margin-top:13px;
                 &::after{
                     content:'';
                     display: block;
@@ -397,17 +400,17 @@
                     border-radius: 50%;
                     position: absolute;
                     right: 0;
-                    top:0%;
+                    top:0;
                 }
             }
-            #show-more{
-                height: 35px;
-                color:white;
-                position: absolute;
-                bottom: 0px;
-                left: 50%;transform: translateX(-50%);
-                cursor: pointer;
-            }
+        }
+        #show-more{
+            height: 35px;
+            color:white;
+            position: absolute;
+            bottom: 0px;
+            left: 50%;transform: translateX(-50%);
+            cursor: pointer;
         }
     }
     /* END___OF__#CONTACTS____  */
