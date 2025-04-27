@@ -55,22 +55,66 @@ status_items.forEach((status_item) => {
 
 
 // _________Slider_________
-const row_slider = document.querySelector('.row-slider')
-const row_slider_figures = document.querySelectorAll('.row-slider>figure')
-row_slider.style.width = 200 * row_slider_figures.length + 'px'
+// const row_slider = document.querySelector('.row-slider')
+// const row_slider_figures = document.querySelectorAll('.row-slider>figure')
+// row_slider.style.width = 200 * row_slider_figures.length + 'px'
 
-// BTNS Sliders 
-let index = 200
-const prevSlide = document.getElementById('prev-slide')
-const nextSlide = document.getElementById('next-slide')
+// // BTNS Sliders 
+// let index = 200
+// const prevSlide = document.getElementById('prev-slide')
+// const nextSlide = document.getElementById('next-slide')
+// nextSlide.addEventListener('click', () => {
+//     row_slider.style.transform = 'translateX(-' + index + '+px)'
+//     index++
+// })
+
+// prevSlide.addEventListener('click', () => {
+//     alert('Prev')
+// })
+
+const row_slider = document.querySelector('.row-slider');
+const row_slider_figures = document.querySelectorAll('.row-slider > figure');
+
+// گرفتن عرض یک عکس
+const slideWidth = row_slider_figures[0].offsetWidth;
+
+// تعیین عرض کل اسلایدر
+row_slider.style.width = slideWidth * row_slider_figures.length + 'px';
+
+// موقعیت فعلی
+let currentIndex = 0;
+
+// دکمه‌ها
+const prevSlide = document.getElementById('prev-slide');
+const nextSlide = document.getElementById('next-slide');
+
+// کلیک روی "بعدی"
 nextSlide.addEventListener('click', () => {
-    row_slider.style.transform = 'translateX(-' + index + '+px)'
-    index++
-})
+    if (currentIndex < row_slider_figures.length - 1) {
+        currentIndex++;
+    } else {
+        // رفتن به اول وقتی آخر رسیدیم
+        currentIndex = 0;
+    }
+    moveSlider();
+});
 
+// کلیک روی "قبلی"
 prevSlide.addEventListener('click', () => {
-    alert('Prev')
-})
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        // رفتن به آخر وقتی اول رسیدیم
+        currentIndex = row_slider_figures.length - 1;
+    }
+    moveSlider();
+});
+
+// تابع حرکت دادن اسلایدر
+function moveSlider() {
+    row_slider.style.transform = 'translateX(-' + (slideWidth * currentIndex) + 'px)';
+    row_slider.style.transition = 'transform 0.5s ease-in-out';
+}
 
 
 
