@@ -82,39 +82,48 @@ const slideWidth = row_slider_figures[0].offsetWidth;
 row_slider.style.width = slideWidth * row_slider_figures.length + 'px';
 
 // موقعیت فعلی
-let currentIndex = 0;
+// let currentIndex = 0;
 
 // دکمه‌ها
+const error=document.querySelector('.error')
 const prevSlide = document.getElementById('prev-slide');
 const nextSlide = document.getElementById('next-slide');
 
-// کلیک روی "بعدی"
-nextSlide.addEventListener('click', () => {
-    if (currentIndex < row_slider_figures.length - 1) {
-        currentIndex++;
-    } else {
-        // رفتن به اول وقتی آخر رسیدیم
-        currentIndex = 0;
-    }
-    moveSlider();
-});
+nextSlide.addEventListener('click' , ()=>{
+    error.classList.add('show')
+})
 
-// کلیک روی "قبلی"
-prevSlide.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-    } else {
-        // رفتن به آخر وقتی اول رسیدیم
-        currentIndex = row_slider_figures.length - 1;
-    }
-    moveSlider();
-});
 
-// تابع حرکت دادن اسلایدر
-function moveSlider() {
-    row_slider.style.transform = 'translateX(-' + (slideWidth * currentIndex) + 'px)';
-    row_slider.style.transition = 'transform 0.5s ease-in-out';
-}
+
+
+
+// // کلیک روی "بعدی"
+// nextSlide.addEventListener('click', () => {
+//     if (currentIndex < row_slider_figures.length - 1) {
+//         currentIndex++;
+//     } else {
+//         // رفتن به اول وقتی آخر رسیدیم
+//         currentIndex = 0;
+//     }
+//     moveSlider();
+// });
+
+// // کلیک روی "قبلی"
+// prevSlide.addEventListener('click', () => {
+//     if (currentIndex > 0) {
+//         currentIndex--;
+//     } else {
+//         // رفتن به آخر وقتی اول رسیدیم
+//         currentIndex = row_slider_figures.length - 1;
+//     }
+//     moveSlider();
+// });
+
+// // تابع حرکت دادن اسلایدر
+// function moveSlider() {
+//     row_slider.style.transform = 'translateX(-' + (slideWidth * currentIndex) + 'px)';
+//     row_slider.style.transition = 'transform 0.5s ease-in-out';
+// }
 
 
 

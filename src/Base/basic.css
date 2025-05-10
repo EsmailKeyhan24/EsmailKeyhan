@@ -39,7 +39,6 @@ div {
 img {
     object-fit: cover;
 }
-
 .btns {
     background-color: #1b86f9;
     border: none;
@@ -49,4 +48,32 @@ img {
     margin-left: auto;
     box-shadow: 0 0 20px #1b86f9;
     cursor: pointer;
+}
+
+
+
+.error{
+    background-color:black;
+    color: white;
+    padding:4px 15px;
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translate(-50% , -50%);
+    z-index:1000000;
+    visibility:hidden;
+}
+.error.show{
+    animation:error .4s linear alternate 2;
+}
+@keyframes error {
+    from{
+        transform: translate(-50% , -50%) scale(1);
+        opacity: 0;
+        visibility:hidden;
+    }
+    to{
+        transform: translate(-50% , -50%) scale(1.5);
+        opacity: 1;
+        visibility:visible;
+    }
 }
